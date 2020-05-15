@@ -38,8 +38,6 @@ if __name__ == '__main__':
     h = 0.01
     k = 0.4
     plt.style.use('seaborn-ticks')
-    plt.rcParams['figure.facecolor'] = '#D3D3D3'
-    plt.rcParams['axes.facecolor'] = '#f0f0f0'
 
     def buildFromButton(event):
         global ax, x, y
@@ -100,6 +98,8 @@ if __name__ == '__main__':
 
 
     fig, ax = plt.subplots()
+    fig.set(facecolor = 'lightgray')
+    ax.set(facecolor = 'white')
     fig.canvas.set_window_title('ODE')
     fig.subplots_adjust(left=0.25, right=0.96, top=0.92, bottom=0.06)
     ax.set_title("$\ddot{x} = -x -k\dot{x}$", size = 16)
